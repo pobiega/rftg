@@ -40,11 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DiceBag.cs" />
+    <Compile Include="Controllers\StateController.cs" />
+    <Compile Include="Model\DiceBag.cs" />
     <Compile Include="Model\Dice.cs" />
     <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\Tableau.cs" />
+    <Compile Include="Model\TileBag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="State.cs" />
+    <Compile Include="Model\State.cs" />
     <Compile Include="Model\Tile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace RollForTheGalaxy.Game.Model
 {
-    public class Player
+    public class Tableau
     {
-        public List<Dice> DicePool { get; }
-        public Tableau Tableau { get; }
+        public Player Owner { get; }
+        public List<Tile> Tiles { get; }
 
-        public Player()
+        public Tableau(Player owner)
         {
-
+            this.Owner = owner;
         }
     }
 }

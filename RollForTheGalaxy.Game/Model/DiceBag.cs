@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RollForTheGalaxy.Game
+namespace RollForTheGalaxy.Game.Model
 {
     public class DiceBag
     {
@@ -23,21 +23,18 @@ namespace RollForTheGalaxy.Game
         public Dice Get(Color color)
         {
             var currentCount = dicePool[color];
-            if (currentCount > 0)
-            {
-                dicePool[color] = currentCount - 1;
-                return new Dice(color, GetDistribution(color));
-            }
 
-            return null;
+            if (currentCount == 0)
+                return null;
+
+            dicePool[color] = currentCount - 1;
+            return new Dice(color, GetDistribution(color));
         }
 
         public IEnumerable<Dice> Get(Color color, int count)
         {
             for (int i = 0; i < count; i++)
-            {
                 yield return Get(color);
-            }
         }
 
         private static Face[] GetDistribution(Color color)
@@ -126,7 +123,7 @@ namespace RollForTheGalaxy.Game
                     new FaceCount(Face.Develop, 1),
                     new FaceCount(Face.Settle, 1),
                     new FaceCount(Face.Produce, 1),
-                    new FaceCount(Face.Ship, 3),
+                    new FaceCount(Face.Wild, 3),
                 }
             }
         };

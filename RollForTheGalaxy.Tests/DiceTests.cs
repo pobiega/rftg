@@ -24,9 +24,10 @@ namespace UnitTestProject1
             Assert.IsFalse(createdDice.Any(d => d.Color == Color.Green));
             Assert.IsFalse(createdDice.Any(d => d == null));
 
+            //Try to take 11 yellow
             createdDice.AddRange(diceBag.Get(Color.Yellow, 11));
 
-            //Only 9 yellow in the dice bag
+            //Only 9 yellow in the dice bag, two should be null
             Assert.IsTrue(createdDice.Where(d => d == null).Count() == 2);
         }
     }
