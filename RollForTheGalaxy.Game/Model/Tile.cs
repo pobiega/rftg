@@ -6,15 +6,25 @@ using System.Threading.Tasks;
 
 namespace RollForTheGalaxy.Game.Model
 {
+    public enum TileSide
+    {
+        Development,
+        Planet
+    }
+
     public class Tile
     {
-        public int Cost { get; }
         private List<Dice> assignedDice;
 
-        public Tile(int cost)
+        public Planet Planet { get; }
+        public Development Development { get; }
+        public TileSide ActiveSide { get; }
+
+        public Tile(Planet planet, Development development)
         {
-            this.Cost = cost;
             assignedDice = new List<Dice>();
+            this.Planet = planet;
+            this.Development = development;
         }
 
         public Dice[] ReturnAssignedDice()

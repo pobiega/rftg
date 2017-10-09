@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollForTheGalaxy.Game", "RollForTheGalaxy.Game\RollForTheGalaxy.Game.csproj", "{C6B89A76-03E2-45C6-A292-6533073D0F08}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollForTheGalaxy.Tests", "RollForTheGalaxy.Tests\RollForTheGalaxy.Tests.csproj", "{0378616E-C987-4B06-B63B-92BCCAAF37C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollForTheGalaxy.Serializer", "RollForTheGalaxy.Serializer\RollForTheGalaxy.Serializer.csproj", "{68C71CB0-FEAE-4ED9-87FF-AFC4FE7B6A1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,15 @@ Global
 		{0378616E-C987-4B06-B63B-92BCCAAF37C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0378616E-C987-4B06-B63B-92BCCAAF37C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0378616E-C987-4B06-B63B-92BCCAAF37C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68C71CB0-FEAE-4ED9-87FF-AFC4FE7B6A1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68C71CB0-FEAE-4ED9-87FF-AFC4FE7B6A1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68C71CB0-FEAE-4ED9-87FF-AFC4FE7B6A1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68C71CB0-FEAE-4ED9-87FF-AFC4FE7B6A1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6E10049-83B1-49A0-B80B-35283326790B}
 	EndGlobalSection
 EndGlobal

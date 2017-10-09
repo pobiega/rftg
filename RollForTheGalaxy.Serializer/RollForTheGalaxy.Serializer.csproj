@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C6B89A76-03E2-45C6-A292-6533073D0F08}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RollForTheGalaxy.Game</RootNamespace>
-    <AssemblyName>RollForTheGalaxy.Game</AssemblyName>
+    <ProjectGuid>{68C71CB0-FEAE-4ED9-87FF-AFC4FE7B6A1C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RollForTheGalaxy.Serializer</RootNamespace>
+    <AssemblyName>RollForTheGalaxy.Serializer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,12 +24,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>RollForTheGalaxy.Serializer.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -43,25 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\StateController.cs" />
-    <Compile Include="Effects\GainDieEffect.cs" />
-    <Compile Include="Effects\GainMoneyEffect.cs" />
-    <Compile Include="Model\Development.cs" />
-    <Compile Include="Model\DiceBag.cs" />
-    <Compile Include="Model\Dice.cs" />
-    <Compile Include="Effects\Effect.cs" />
-    <Compile Include="Model\ITarget.cs" />
-    <Compile Include="Model\Planet.cs" />
-    <Compile Include="Model\Player.cs" />
-    <Compile Include="Model\Tableau.cs" />
-    <Compile Include="Model\TileBag.cs" />
-    <Compile Include="Model\TileBase.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\State.cs" />
-    <Compile Include="Model\Tile.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RollForTheGalaxy.Game\RollForTheGalaxy.Game.csproj">
+      <Project>{c6b89a76-03e2-45c6-a292-6533073d0f08}</Project>
+      <Name>RollForTheGalaxy.Game</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
